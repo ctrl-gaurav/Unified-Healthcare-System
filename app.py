@@ -61,11 +61,16 @@ def login():
         conn = db_connection()
         curr = conn.cursor()
         resultvalue = curr.execute("SELECT * FROM users WHERE username = ?", ([username]))
-        user = str(curr.fetchone())
-        if userDetails['password'] == user['password']:
-            session['user'] = str(request.form['email'])
-            return redirect(url_for('protected'))
-
+        if resultvalue is None:
+            user = curr.fetchone()
+            print(user[2])
+            if userDetails['password'] == user[2]:
+                session['user'] = str(request.form['email'])
+                return redirect(url_for('protected'))
+        else:
+            curr.close()
+            flash('User not found', 'danger')
+            return render_template('login.html')
     return render_template('login.html')
 
 @app.route('/protected')
