@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% block title %}login{% endblock title %}
+{% block body %}
+
+<div class="container-xl">
+
+    <div class="row align-items-start">
+         <div class="row">
+    <div class="col-8" >
+        <h1 class="display-1">HealthBeats Doctor Side.</h1>
+        <div class="container-8">
+              <div class="row g-2">
+                <div class="col-6">
+                  <div class="p-3 border bg-light">
+                     <img src="/static/dec10.png" class="rounded mx-auto d-block" alt="..." style="width: 13rem; box-shadow: 0px 8px 8px -6px rgba(0,0,0,.5)">
+                  </div>
+                </div>
+                   <div class="col-6">
+                <div class="p-3 border bg-light">
+                     <img src="/static/dec11.png" class="rounded mx-auto d-block" alt="..." style="width: 13rem;box-shadow: 0px 8px 8px -6px rgba(0,0,0,.5)">
+                  </div>
+              </div>
+                   <div class="col-4">
+               <div class="p-3 border bg-light">
+                     <img src="/static/dec12.png" class="rounded mx-auto d-block" alt="..." style="width: 13rem;box-shadow: 0px 8px 8px -6px rgba(0,0,0,.5)">
+                  </div>
+                </div>
+              <div class="col-4">
+                <div class="p-3 border bg-light">
+                     <img src="/static/dec13.png" class="rounded mx-auto d-block" alt="..." style="width: 13rem;box-shadow: 0px 8px 8px -6px rgba(0,0,0,.5)">
+                  </div>
+              </div>
+                  <div class="col-4">
+                <div class="p-3 border bg-light">
+                     <img src="/static/dec14.png" class="rounded mx-auto d-block" alt="..." style="width: 13rem;box-shadow: 0px 8px 8px -6px rgba(0,0,0,.5)">
+                  </div>
+              </div>
+          </div>
+        </div>
+    </div>
+    <div class="col align-items-end" style="background-color:rgb(249, 179, 71);box-shadow: 0px 8px 8px -6px rgba(0,0,0,.5)">
+        <h1 class="fw-bold" style="text-align: center;">Doctor Side</h1>
+        <form>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1">
+          </div>
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+            <a href={{url_for('signup')}} class="btn btn-secondary btn-lg">SignUP</a>
+        </form>
+
+    </div>
+
+</div>
+    </div>
+</div>
+
+{% endblock body %}

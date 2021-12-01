@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% block title %} Home{% endblock title %}
+{% block body %}
+
+<div class="container-xl">
+
+    <div class="row align-items-start">
+         <div class="row">
+    <div class="col-8" >
+        <h1 class="display-1">Welcome to HealthBeats</h1>
+        <div class="container-8">
+              <div class="row g-2">
+                <div class="col-6">
+                  <div class="p-3 border bg-light">
+                     <img src="/static/dec1.png" class="rounded mx-auto d-block" alt="..." style="width: 15rem; box-shadow: 0px 8px 8px -6px rgba(0,0,0,.5)">
+                  </div>
+                </div>
+                   <div class="col-6">
+                <div class="p-3 border bg-light">
+                     <img src="/static/dec2.png" class="rounded mx-auto d-block" alt="..." style="width: 15rem;box-shadow: 0px 8px 8px -6px rgba(0,0,0,.5)">
+                  </div>
+              </div>
+                   <div class="col-6">
+               <div class="p-3 border bg-light">
+                     <img src="/static/dec3.png" class="rounded mx-auto d-block" alt="..." style="width: 15rem;box-shadow: 0px 8px 8px -6px rgba(0,0,0,.5)">
+                  </div>
+                </div>
+              <div class="col-6">
+                <div class="p-3 border bg-light">
+                     <img src="/static/dec4.png" class="rounded mx-auto d-block" alt="..." style="width: 15rem;box-shadow: 0px 8px 8px -6px rgba(0,0,0,.5)">
+                  </div>
+              </div>
+          </div>
+        </div>
+    </div>
+    <div class="col align-items-end" style="background-color:rgb(186, 219, 243); box-shadow: 0px 8px 8px -6px rgba(0,0,0,.5)">
+        <h1 class="fw-bold" style="text-align: center;">...LogIn...</h1>
+        <div class="col align-items-end" style="background-color:rgb(186, 219, 243)">
+        <h1 class="fw-bold" style="text-align: center;">Select your side</h1>
+        <div class="p-6 border" style = "margin-top: 50%; box-shadow: 0px 8px 8px -6px rgba(0,0,0,.5)">
+            <div class="d-grid gap-2 col-6 mx-auto" >
+                <a href={{url_for('login')}} class="btn btn-primary btn-lg"  style="background-color:rgb(209, 241, 137);" > <p class="text-dark">Citizen Side</p></a>
+                <p class="text-center" >OR</p>
+               <a href={{url_for('loginDoc')}} class="btn btn-secondary btn-lg" style="background-color:rgb(249, 179, 71);" ><p class="text-dark">Doctor Side</p></a>
+            </div>
+        </div>
+
+    </div>
+
+    </div>
+
+</div>
+    </div>
+</div>
+
+
+
+{% endblock body %}
